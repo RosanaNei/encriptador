@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    margin: 0;
 }
 
 html{
@@ -13,9 +14,33 @@ html{
 
 body{
     background-color: var(--color-claro);
-    /* background-image: url(imgs/fondo.jpg) ;
-    background-attachment: fixed;
-    background-size: cover; */
+}
+
+header{
+    background-color: rgba(192, 160, 72, 0.808);
+    width: 100%;
+    height: auto;
+    margin-top: 1.2rem;
+    
+}
+
+.caja-titulo{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+h1{
+    font-family: 'Domine', serif;
+    font-size: 2rem;
+    padding: 1rem 4rem;
+    width: 40%;
+}
+
+.autor{
+    font-size: 1.2rem;
+    padding: 1rem;
 }
 
 body::before {
@@ -25,17 +50,24 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(imgs/fondo.jpg);
+    background-image: url(imgs/fondo-removebg-preview.png);
     background-attachment: fixed;
     background-size: cover;
     opacity: 0.5;
     z-index: -1;
   }
 
+
 textarea{
     all: unset;
     background-color: aqua;
     padding: 1rem;
-    background-image: url(imgs/tipeo4.svg);
+    background-image: url(imgs/fondo-removebg-preview.png);
     background-size: contain;
+}
+
+.parrafo-a-copiar{
+    width: 100px;
+    height: 150px;
+    background-color: #fff;
 }

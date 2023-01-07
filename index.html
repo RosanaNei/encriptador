@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap" rel="stylesheet">
     <title>Encriptador/desencriptador</title>
 </head>
 <body>
     <header>
-
+       <div class="caja-titulo">
+            <h1>Encriptador!</h1>
+            <p class = "autor">por Rosana-Nei</p>
+       </div>
     </header>
     <main>
-        <div class="entradas">
-            <form action="">
-                <label for="texto-usuario">Aquí escriba </label>
-                <textarea name="texto-usuario" class = "texto-usuario" id="texto-usuario" cols="70" rows="10" placeholder="ingrese el texto aquí" required></textarea>
-                <p>sólo minúsculas y sin acentos</p>
-                <button type="submit">encriptar!</button>
-                <input type="submit" value="encriptaaar" class = "enviar">
-            </form>
-
+        <div class="contenedor">
+            <div class="entradas">
+                <form action="">
+                    <label for="texto-usuario">Aquí escriba </label>
+                    <textarea name="texto-usuario" class = "texto-usuario" id="texto-usuario" cols="70" rows="10" placeholder="ingrese el texto aquí" required></textarea>
+                    <p>sólo minúsculas y sin acentos</p>
+                    <button id = "miBoton"type="submit">encriptar!</button>
+                    <input type="submit" value="encriptaaar" class = "enviar">
+                </form>
+            </div>
+            <div class="parrafo-a-copiar" id = "parrafo-a-copiar" >
+                <p></p>
+            </div>
         </div>
-
     </main>
     <footer>
         
     </footer>
-    
+
+    <script src="scripts.js"></script>
 </body>
 </html>

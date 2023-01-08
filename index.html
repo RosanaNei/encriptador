@@ -6,29 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Domine:wght@600&display=swap" rel="stylesheet">
     <title>Encriptador/desencriptador</title>
 </head>
 <body>
     <header>
        <div class="caja-titulo">
-            <h1>Encriptador!</h1>
+            <h1>Encriptador<span>!</span></h1>
             <p class = "autor">por Rosana-Nei</p>
        </div>
     </header>
     <main>
         <div class="contenedor">
-            <div class="entradas">
-                <form action="">
-                    <label for="texto-usuario">Aquí escriba </label>
-                    <textarea name="texto-usuario" class = "texto-usuario" id="texto-usuario" cols="70" rows="10" placeholder="ingrese el texto aquí" required></textarea>
-                    <p>sólo minúsculas y sin acentos</p>
-                    <button id = "miBoton"type="submit">encriptar!</button>
-                    <input type="submit" value="encriptaaar" class = "enviar">
-                </form>
-            </div>
-            <div class="parrafo-a-copiar" id = "parrafo-a-copiar" >
-                <p></p>
-            </div>
+            <form action="">          
+
+                <div class="campos-de-entradas"> 
+                    <textarea name="texto-usuario" class = "texto-usuario" id="texto-usuario" cols="30" rows="10" placeholder="ingrese el texto aquí" ></textarea>
+                        
+                    <p>sólo minúsculas y sin acentos</p>    
+                </div>
+                
+                <div class="botones">
+                    <button class = "boton-entrada" id = "encriptador"type="submit">encriptar!</button>
+                    <button class = "boton-entrada" id = "desencriptador"type="submit">desencriptar!</button>
+                </div>
+            </form>
+
+            <div class="campos-de-salida">
+                <textarea class = "parrafo-a-copiar" id = "parrafo-a-copiar" ></textarea>
+            
+                <button type="submit" class="resultado-copiar" data-replacement="New text">Copiar</button>
+            </div>             
         </div>
     </main>
     <footer>
@@ -36,5 +44,7 @@
     </footer>
 
     <script src="scripts.js"></script>
+    <script src="https://kit.fontawesome.com/b81fe35c5c.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

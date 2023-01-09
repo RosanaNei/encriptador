@@ -12,10 +12,12 @@
 </head>
 <body>
     <header>
-       <div class="caja-titulo">
-            <h1>Encriptador<span>!</span></h1>
-            <p class = "autor">por Rosana-Nei</p>
-       </div>
+        <div class="caja-titulo">
+            <h1>
+              Encriptador<span>!</span>
+              <p class="invertido">Desencriptador <span>!</span></p>
+            </h1>
+          </div>
     </header>
     <main>
         <div class="contenedor">
@@ -34,22 +36,31 @@
 
             </form>
 
-            <div class="encriptado">
-                
+            <div class="encriptado">               
+ 
                 <div class="campos-de-salida">
-                    <textarea class = "parrafo-a-copiar" id = "parrafo-a-copiar"cols="10" rows="6" ></textarea> 
-                    <p class = "advertencia">Ningún mensaje encontrado</p> 
-                    <p class = "advertencia">ingrese el texto que desea encriptar o desencriptar</p>
-                    <div class="botones">
-                        <button type="submit" class="resultado-copiar" >Copiar</button>
+
+                    <div class="imagen-y-textos">
+                        <img src="imgs/principito.svg" alt="">
+                       <div class="textos">
+                            <p class = "advertencia principal">Ningún mensaje encontrado</p> 
+                            <p class = "advertencia">ingrese el texto que desea encriptar o desencriptar</p>
+                       </div>   
                     </div>
-                </div>          
+                    <div class="textarea-y-boton">
+                        <textarea class = "parrafo-a-copiar" id = "parrafo-a-copiar"cols="10" rows="6" ></textarea>                  
+                        <div class="botones">
+                            <button type="submit" class="resultado-copiar" >Copiar</button>
+                        </div>
+                    </div>
+                    
+                </div>
                
             </div>             
         </div>
     </main>
     <footer>
-        
+        <p>&copy; 2022 creado por Rosana-Nei</p>
     </footer>
 
     <script src="scripts.js"></script>

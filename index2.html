@@ -22,25 +22,29 @@
             <form action="">          
 
                 <div class="campos-de-entrada"> 
-                    <textarea name="texto-usuario" class = "texto-usuario" id="texto-usuario" cols="30" rows="4" placeholder="ingrese el texto aquí" ></textarea>                        
-                   
-                </div>
-                   
-                <p class = "advertencia">sólo minúsculas y sin acentos</p> 
-                <div class="botones">                    
-                    <button class = "boton-entrada" id = "encriptador"type="submit">encriptar!</button>
-                    <button class = "boton-entrada" id = "desencriptador"type="submit">desencriptar!</button>
-                </div>
+                    <textarea name="texto-usuario" class = "texto-usuario" id="texto-usuario" cols="30" rows="30" placeholder="ingrese el texto aquí" ></textarea>
+
+                    <p class = "advertencia">sólo minúsculas y sin acentos</p> 
+
+                    <div class="botones">                    
+                        <button class = "boton-entrada" id = "encriptador"type="submit">encriptar!</button>
+                        <button class = "boton-entrada" id = "desencriptador"type="submit">desencriptar!</button>
+                    </div>                    
+                </div>         
+
             </form>
 
             <div class="encriptado">
+                
                 <div class="campos-de-salida">
-                    <textarea class = "parrafo-a-copiar" id = "parrafo-a-copiar"cols="30" rows="4" ></textarea>
-                </div>
-            
-                <div class="botones">
-                    <button type="submit" class="resultado-copiar" cols="30" rows="6" data-replacement="New text">Copiar</button>
-                </div>
+                    <textarea class = "parrafo-a-copiar" id = "parrafo-a-copiar"cols="10" rows="6" ></textarea> 
+                    <p class = "advertencia">Ningún mensaje encontrado</p> 
+                    <p class = "advertencia">ingrese el texto que desea encriptar o desencriptar</p>
+                    <div class="botones">
+                        <button type="submit" class="resultado-copiar" >Copiar</button>
+                    </div>
+                </div>          
+               
             </div>             
         </div>
     </main>

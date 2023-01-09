@@ -1,4 +1,4 @@
-document.querySelector('textarea').addEventListener('input', function() {
+document.querySelector('.texto-usuario').addEventListener('input', function() {
   var invalidCharacters = /[A-ZÁÉÍÓÚÜáéíóúüÀÈÌÒÙàèìòùÇçÑñÏïÖöÜü]|['´`]/g
   ;
   var foundInvalid = false;

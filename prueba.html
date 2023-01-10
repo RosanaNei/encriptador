@@ -1,0 +1,24 @@
+<!-- HTML --> 
+<textarea id="textarea"></textarea> 
+<button id="button">Encriptar y mostrar</button> 
+<div id="output"></div> 
+ 
+<!-- JavaScript --> 
+<script> 
+  // Obtener una referencia al button y al div 
+  const button = document.getElementById('button'); 
+  const output = document.getElementById('output'); 
+ 
+  // Agregar un evento click al button 
+  button.addEventListener('click', () => { 
+    // Obtener el texto ingresado en la textarea 
+    const text = document.getElementById('textarea').value; 
+ 
+    // Encriptar el texto (sustituyendo cada carácter por el siguiente en el alfabeto) 
+    const encryptedText = text.split('').map(char => String.fromCharCode(char.charCodeAt(0) + 1)).join(''); 
+ 
+    // Establecer el texto encriptado en el div de salida 
+    output.textContent = encryptedText; 
+  }); 
+</script> 
+ 

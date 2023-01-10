@@ -86,8 +86,10 @@ document.querySelector('#encriptador').addEventListener('click', function(event)
   // Obtiene el valor de la textarea texto-usuario
   var textoUsuario = document.querySelector('#texto-usuario').value;
 
+  var encriptado = textoUsuario.split('').map(char => String.fromCharCode(char.charCodeAt(0) + 1)).join(''); 
+
   // Asigna el valor a la textarea parrafo-a-copiar
-  document.querySelector('#parrafo-a-copiar').value = textoUsuario;
+  document.querySelector('#parrafo-a-copiar').value = encriptado;
 
   // Limpia el valor de la textarea texto-usuario
   document.querySelector('#texto-usuario').value = '';
@@ -104,4 +106,18 @@ document.querySelector('.resultado-copiar').addEventListener('click', function(e
 
   // Limpia el valor de la textarea parrafo-a-copiar
   document.querySelector('#parrafo-a-copiar').value = '';
+});
+
+document.querySelector('#desencriptador').addEventListener('click', function(event) {
+  event.preventDefault(); // Evita que se envíe el formulario
+
+  // Obtiene el valor de la textarea texto-usuario
+  var textoUsuario = document.querySelector('#texto-usuario').value;
+
+  var desencriptado = textoUsuario.split('').map(char => String.fromCharCode(char.charCodeAt(0) - 1)).join(''); 
+
+  
+
+  // Limpia el valor de la textarea texto-usuario
+  document.querySelector('#texto-usuario').value = desencriptado;
 });

@@ -72,8 +72,7 @@ main{
 .contenedor{
     display: grid;
     grid-template-columns: 2fr 1fr;   
-    border-radius: 1rem;
-    background-image: radial-gradient(circle at 20% 80%,rgba(142, 228, 227, 0.768),rgba(142, 228, 227, 1));      
+    border-radius: 1rem;     
 }
 
 form, .encriptado{ 
@@ -81,13 +80,16 @@ form, .encriptado{
     flex-wrap: wrap;
     justify-content: flex-end;
     padding: 1rem ; 
-    border-radius: 1rem;
     position:relative
+}
+form{
+    background-image: linear-gradient(to right, rgba(142, 228, 227, 0.768),rgba(142, 228, 227));   
+    border-radius: 1rem  0 0 1rem;  
 }
 
 .encriptado{
-    background-color:var(--color-claro);
-   
+    background-color:var(--color-claro);  
+    border-radius:0 1rem 1rem 0; 
 }
 
 .campos-de-entrada, .campos-de-salida {
@@ -104,23 +106,33 @@ form, .encriptado{
     background-color:whitesmoke;
 }
 
-.imagen-y-textos {
+/* .imagen-y-textos {
     display: flex;
     flex-wrap: wrap;
+} */
+
+.imagen-y-textos{
+    display: none;
 }
 
 .imagen-y-textos img{
     position: absolute;
-    top: 1rem;
-    left:.5rem;
-    max-width: 80%;
+    top: 0;
+    left:3rem;
+    max-width: 70%;
     height: auto;
     overflow: hidden;
 }
 
-.textarea-y-boton{
+/* .textarea-y-boton{
     display: none;
+} */
+
+.textarea-y-boton{
+    display: flex;
+    flex-wrap: wrap;
 }
+
 .texto-usuario, .parrafo-a-copiar{
     all: unset;    
     padding: .3rem; 
@@ -134,8 +146,9 @@ form, .encriptado{
 }
 
 .advertencia{
-    font-size: .6rem;
-    margin-bottom: .5rem;
+    font-size: .7rem;
+    font-weight: 800;
+    margin:0 0 0.5rem .5rem;
 }
 
 .principal{
@@ -147,8 +160,7 @@ form, .encriptado{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: end;
-   
+    align-items: end;   
 }
 
 .boton-entrada, .resultado-copiar{
@@ -186,18 +198,23 @@ footer p{
     .caja-titulo{
         grid-template-columns: 1fr;
     }
-    .contenedor{
+    .contenedor{       
         display: grid;
         grid-template-columns: 1fr;  
         justify-content:center; 
-       }
+    }
+    form, .encriptado{
+        border-radius: 0;
+    }
     form{
-        max-height:40rem;
-    }
+        background-image: linear-gradient(to bottom, rgba(142, 228, 227, 0.768),rgba(142, 228, 227)); 
+    } 
     .encriptado{
-        max-width: 80%;
-        margin:0 auto;
-    }
+        justify-content: center;
+    }  
+    .campos-de-entrada{
+        max-height:30vh;
+    }    
     .texto-usuario{
         max-height: 10rem;
     }
@@ -207,7 +224,9 @@ footer p{
         padding: 0.3rem .5rem;
     }    
     .imagen-y-textos img{
-        max-width:50%;
+        max-width: 50%;
+        left:5rem;
+        top: .5rem;
         height: auto;
         overflow: hidden;
     }
